@@ -17,9 +17,8 @@ body ,h1{
     --blue:rgb(125,82,196);
     --white:rgb(255,255,255);
     --grey: rgb(54,54,54);
-    --light-grey: rgb(155,155,155);
+    --light-grey: rgb(71, 70, 70);
 }
-
 /* For all main heading */
 .main-heading{
     font-family: "Montseratt-Bold";
@@ -31,6 +30,7 @@ body ,h1{
 /* For all Paragraph */
 .paragraph{
     font-size:18px;
+    line-height: 24px;
 }
 /* Button */
 .button{
@@ -42,13 +42,39 @@ body ,h1{
     font-weight: 600;
     border: 0;
 }
-.button.pur{
-    background-color: var(--purple);
-    color: var(--white);
+.pur{
+    background-color: var(--purple) !important;
+    color: var(--white) !important;
 }
 .button:hover{
     opacity:0.9;
 }
+/* For All section heading */
+h3.main-heading{
+    font-size: 38px;
+}
+/* for Cards */
+.ser-card{
+    /* margin-top: 18px;
+    height: 330px; */
+    background-color: var(--white);
+    color: var(--light-grey);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ser-card-top{
+    border-radius: 20px;
+    border-top: 2px solid var(--purple);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.ser-card>h5{
+    color: var(--purple); 
+}
+    
 
 
 
@@ -112,6 +138,19 @@ transform: translate3d(85px,0,0);
 }
 }
 
+/* ------ Main ------ */
+main{
+    margin-top: 170px;
+}
+/* Service Section */
+#service-section  .ser-card{
+    margin-top: 18px;
+    height: 330px;
+}
+
+
+
+
 
 
 
@@ -124,14 +163,23 @@ transform: translate3d(85px,0,0);
     .paragraph{
         font-size:16px;
     }
-    .main-heading{
+    h1.main-heading{
         font-size:  calc(1.375rem + 1.5vw);
-    }    
-    
-   
+    }
+    #service-section  .ser-card{
+        margin-top: 15px;
+        height: 320px;
+    }
+    h3.main-heading{
+        font-size: 35px;
+    }
+
 }
 @media (max-width: 1200px) { 
-
+    main{
+        margin-top: 150px;
+    }
+    
      
   
 }
@@ -147,6 +195,9 @@ transform: translate3d(85px,0,0);
         padding: 10px 30px ;
         font-size:15px;
     }
+    h3.main-heading{
+        font-size: 30px;
+    }
 
 }
 @media (max-width: 768px) { 
@@ -154,18 +205,23 @@ transform: translate3d(85px,0,0);
     .waves {
         height:40px;
         min-height:40px;
-        }
-        /* .main-heading{
-        font-size: calc(1.425rem + 2.1vw) 
-    } */
-       
+    }
+    main{
+        margin-top: 130px;
+    }
+
 }
 @media (max-width:576px) {
-  
     /* ------ Header ------ */
     /* ------ Navbar ------ */
-        .navbar-brand{
-            width: 35px !important;
-        }
+    .navbar-brand{
+        width: 35px !important;
+    }
+    main{
+        margin-top:120px;
+    }
+    h3.main-heading{
+        font-size: 28px;
+    }
 }
     
