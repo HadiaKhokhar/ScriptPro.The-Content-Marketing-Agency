@@ -23,6 +23,7 @@ body,h1{
 .main-heading{
     font-family: "Montseratt-Bold";
     color: var(--grey);
+    text-transform: capitalize;
 }
 .main-heading>span{
     color: var(--blue);
@@ -55,6 +56,10 @@ main .paragraph{
 /* For All section heading */
 h3.main-heading{
     font-size: 38px;
+}
+/* For all Semi Headings */
+h5.main-heading{
+    font-size:25px ;
 }
 /* for Cards */
 .ser-card{
@@ -175,8 +180,12 @@ main{
     transform: translate(-50%, -50%);
     z-index: -1; /* Place the circle behind the main bullet */
 }
-
-
+/* Features Section */
+/* Service Section */
+#featured-section  .ser-card{
+    margin-top:18px;
+    height: 480px;
+}
 
 
 
@@ -203,6 +212,9 @@ main{
     }
     h3.main-heading{
         font-size: 35px;
+    }
+    h5.main-heading{
+        font-size:20px ;
     }
 
 
@@ -233,6 +245,9 @@ main{
     }
     h3.main-heading{
         font-size: 30px;
+    }
+    h5.main-heading{
+        font-size:18px ;
     }
     .bullet {
         width: 56px;
