@@ -6,7 +6,7 @@
     font-family: "Montseratt-Bold";
     src: url(Assests/Fonts/Montserra/Montserrat-Bold.ttf);
 }
-body ,h1{
+body,h1{
     font-family: "Montseratt-Regular" ;
     color: var(--white) !important;
 }
@@ -31,6 +31,9 @@ body ,h1{
 .paragraph{
     font-size:18px;
     line-height: 24px;
+}
+main .paragraph{
+    color: var(--light-grey);
 }
 /* Button */
 .button{
@@ -58,7 +61,6 @@ h3.main-heading{
     /* margin-top: 18px;
     height: 330px; */
     background-color: var(--white);
-    color: var(--light-grey);
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -74,7 +76,7 @@ h3.main-heading{
 .ser-card>h5{
     color: var(--purple); 
 }
-    
+
 
 
 
@@ -141,11 +143,37 @@ transform: translate3d(85px,0,0);
 /* ------ Main ------ */
 main{
     margin-top: 170px;
+    gap: 180px;
 }
 /* Service Section */
 #service-section  .ser-card{
     margin-top: 18px;
-    height: 330px;
+    height: 360px;
+}
+/* Guide Section */
+.bullet {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-purple);
+    border-radius: 50%;
+    margin-right:25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  /* Ensure the icon appears above the ::before pseudo-element */
+}
+.bullet::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: var(--lighter-purple);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place the circle behind the main bullet */
 }
 
 
@@ -166,6 +194,9 @@ main{
     h1.main-heading{
         font-size:  calc(1.375rem + 1.5vw);
     }
+    main{
+        gap: 150px;
+    }
     #service-section  .ser-card{
         margin-top: 15px;
         height: 320px;
@@ -174,11 +205,13 @@ main{
         font-size: 35px;
     }
 
+
 }
 @media (max-width: 1200px) { 
     main{
         margin-top: 150px;
     }
+  
     
      
   
@@ -195,10 +228,22 @@ main{
         padding: 10px 30px ;
         font-size:15px;
     }
+    main{
+        gap: 130px;
+    }
     h3.main-heading{
         font-size: 30px;
     }
-
+    .bullet {
+        width: 56px;
+        height: 56px;
+        margin-right:4px;
+    }
+    .bullet::before {
+        width: 72px;
+        height: 72px;
+    }
+    
 }
 @media (max-width: 768px) { 
     /*Shrinking for mobile*/
@@ -209,6 +254,11 @@ main{
     main{
         margin-top: 130px;
     }
+    .bullet {
+        margin-right:0
+
+    }
+
 
 }
 @media (max-width:576px) {
@@ -223,5 +273,17 @@ main{
     h3.main-heading{
         font-size: 28px;
     }
+    .bullet {
+        width: 35px;
+        height: 35px;
+        top: 5px;
+
+    }
+    .bullet::before {
+        width: 50px;
+        height: 50px;
+
+    }
+
 }
     
