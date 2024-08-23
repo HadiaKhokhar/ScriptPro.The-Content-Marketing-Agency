@@ -16,6 +16,7 @@ body,h1{
     --lighter-purple:rgb(248,237,251);
     --blue:rgb(125,82,196);
     --white:rgb(255,255,255);
+    --section-bg: rgb(250, 243, 251);
     --grey: rgb(54,54,54);
     --light-grey: rgb(71, 70, 70);
 }
@@ -57,7 +58,11 @@ main .paragraph{
 h3.main-heading{
     font-size: 38px;
 }
-/* For all Semi Headings */
+/* For all semi heading */
+h4.main-heading{
+    font-size: 32px;
+}
+/* For all Semi small Headings */
 h5.main-heading{
     font-size:25px ;
 }
@@ -78,10 +83,12 @@ h5.main-heading{
     border-top: 2px solid var(--purple);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.ser-card>h5{
+.ser-card>h4{
     color: var(--purple); 
 }
-
+.m-inline{
+    margin-inline:0;
+}
 
 
 
@@ -91,8 +98,8 @@ h5.main-heading{
 
 /* ------ Header ------ */
 .header{
-position:relative;
-background-color:rgb(182, 83, 199);
+    position:relative;
+    background-color:var(--purple);
 }
 /* ------ Navbar ------ */
 .nav-link{
@@ -109,39 +116,39 @@ background-color:rgb(182, 83, 199);
 }
 /* ------ Hero Section  ------ */
 .waves {
-position:relative;
-width: 100%;
-height:15vh;
-margin-bottom:-7px; /*Fix for safari gap*/
-min-height:100px;
-max-height:150px;
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
 }
 /* Animation */
 .parallax > use {
-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
 }
 .parallax > use:nth-child(1) {
-animation-delay: -2s;
-animation-duration: 7s;
+    animation-delay: -2s;
+    animation-duration: 7s;
 }
 .parallax > use:nth-child(2) {
-animation-delay: -3s;
-animation-duration: 10s;
+    animation-delay: -3s;
+    animation-duration: 10s;
 }
 .parallax > use:nth-child(3) {
-animation-delay: -4s;
-animation-duration: 13s;
+    animation-delay: -4s;
+    animation-duration: 13s;
 }
 .parallax > use:nth-child(4) {
-animation-delay: -5s;
-animation-duration: 20s;
+    animation-delay: -5s;
+    animation-duration: 20s;
 }
 @keyframes move-forever {
 0% {
-transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px,0,0);
 }
 100% { 
-transform: translate3d(85px,0,0);
+    transform: translate3d(85px,0,0);
 }
 }
 
@@ -181,10 +188,54 @@ main{
     z-index: -1; /* Place the circle behind the main bullet */
 }
 /* Features Section */
-/* Service Section */
 #featured-section  .ser-card{
     margin-top:18px;
     height: 480px;
+}
+/* Community Section */
+#community-section{
+    background-color:var(--section-bg);
+    margin-inline: -12px;
+    padding-block: 150px;
+}
+#community-section>.container{
+    gap: 120px;
+}
+.step {
+    border: 1px solid white;
+    border-radius:7px;
+    text-align: center;
+}
+#team-members-box{
+    background-color: var(--purple);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#image-wrapper::after {
+    content: '';
+    display:block;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(182, 83, 199,0.2);
+    border-radius: 1rem;
+}
+#play-button{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    background-color:var(--purple);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    z-index: 1;
+
 }
 
 
@@ -195,8 +246,17 @@ main{
 
 
 
+
+
+
+
+
+
+
+
+
 /* ------ Breakpoints  ------ */
-@media (max-width: 1400px) { 
+@media (max-width:1400px) { 
     .paragraph{
         font-size:16px;
     }
@@ -216,6 +276,10 @@ main{
     h5.main-heading{
         font-size:20px ;
     }
+    h4.main-heading{
+        font-size:28px ;
+    }
+
 
 
 }
@@ -223,10 +287,9 @@ main{
     main{
         margin-top: 150px;
     }
-  
-    
-     
-  
+    .step {
+        font-size: 15px;
+      }
 }
 @media (max-width: 992px) { 
     .navbar-nav{
@@ -249,6 +312,9 @@ main{
     h5.main-heading{
         font-size:18px ;
     }
+    h4.main-heading{
+        font-size:25px ;
+    }
     .bullet {
         width: 56px;
         height: 56px;
@@ -258,6 +324,13 @@ main{
         width: 72px;
         height: 72px;
     }
+    .step {
+        font-size: 12px;
+      }
+      #team-members-box{
+        position: relative;
+      }
+
     
 }
 @media (max-width: 768px) { 
@@ -273,6 +346,11 @@ main{
         margin-right:0
 
     }
+    #play-button{
+        width:50px;
+        height:50px
+    }
+    
 
 
 }
@@ -288,6 +366,9 @@ main{
     h3.main-heading{
         font-size: 28px;
     }
+    h4.main-heading{
+        font-size:21px ;
+    }
     .bullet {
         width: 35px;
         height: 35px;
@@ -299,6 +380,15 @@ main{
         height: 50px;
 
     }
+    #community-section>.container{
+        gap: 60px;
+    }
+    #play-button{
+        width:40px;
+        height:40px
+    }
+    
+    
 
 }
     
