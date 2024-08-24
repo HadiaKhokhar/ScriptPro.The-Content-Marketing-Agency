@@ -6,6 +6,10 @@
     font-family: "Montseratt-Bold";
     src: url(Assests/Fonts/Montserra/Montserrat-Bold.ttf);
 }
+/* Animation for Cards */
+@-webkit-keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(-50px);transform:translateY(-50px)}}@keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(-50px);transform:translateY(-50px)}}
+
+
 body,h1{
     font-family: "Montseratt-Regular" ;
     color: var(--white) !important;
@@ -85,8 +89,14 @@ h5.main-heading{
 .ser-card-top{
     border-radius: 20px;
     border-top: 2px solid var(--purple);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
+.ser-card-top:hover{
+    -webkit-animation:slide-top .5s cubic-bezier(.47,0.000,.745,.715) both;
+    animation:slide-top .8s cubic-bezier(.47,0.000,.745,.715) both
+}
+
+
 .ser-card>h4,.ser-card>h5{
     color: var(--purple); 
 }
@@ -323,6 +333,8 @@ footer .main-heading{
         height:40px;
         min-height:40px;
     }
+    /* For Animation of cards */
+    @-webkit-keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}15%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}}@keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}15%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}}
     main{
         margin-top: 130px;
     }
@@ -381,5 +393,7 @@ footer .main-heading{
     footer li{
         font-size: 12px;
     }
+    
+
 }
     
